@@ -14,3 +14,6 @@ RUN sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/inst
 
 # copy local .zshrc to image
 COPY .zshrc /root/.zshrc
+
+# Cleanup
+RUN dnf clean dbcache
