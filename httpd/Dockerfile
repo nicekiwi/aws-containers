@@ -1,5 +1,5 @@
-ARG ARCH=amd64
-FROM nicekiwi/aws-base:${ARCH:-amd64}
+ARG ARCH=arm64
+FROM nicekiwi/aws-base:${ARCH:-arm64}
 
 RUN yum install -y httpd mod_ssl
 
