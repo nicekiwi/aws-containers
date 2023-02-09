@@ -1,6 +1,6 @@
 ARG BASE_ARCH=amd64
 ARG BASE_VERSION=2
-FROM ${BASE_ARCH:-amd64}/amazonlinux:${BASE_VERSION:-2}
+FROM ${BASE_ARCH}/amazonlinux:${BASE_VERSION}
 
 # Set timezone to UTC
 RUN ln -snf /usr/share/zoneinfo/UTC /etc/localtime
