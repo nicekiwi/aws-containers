@@ -1,5 +1,5 @@
 ARG ARCH=arm64
-FROM nicekiwi/aws-base:${ARCH:-arm64}
+FROM nicekiwi/aws-base:${ARCH}
 
 # Install PHP 8.0
 RUN amazon-linux-extras install -y php8.0
