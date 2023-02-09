@@ -1,5 +1,5 @@
-ARG BASE_TAG=latest
-FROM nicekiwi/aws-base:${BASE_TAG:-latest}
+ARG ARCH=amd64
+FROM nicekiwi/aws-base:${ARCH:-amd64}
 
 # Install PHP 8.1
 RUN amazon-linux-extras install -y php8.1
