@@ -1,10 +1,7 @@
 ARG ARCH=amd64
 FROM nicekiwi/aws-base:${ARCH}
 
-RUN yum install -y httpd mod_ssl
+RUN yum install -y httpd
 
 # Cleanup
 RUN yum clean all
-
-# https://httpd.apache.org/docs/2.4/stopping.html#gracefulstop
-STOPSIGNAL SIGWINCH
