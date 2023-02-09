@@ -1,7 +1,15 @@
-FROM amazonlinux:2.0.20230119.1
+ARG BASE_ARCH=amd64
+ARG BASE_VERSION=2
+FROM ${BASE_ARCH:-amd64}/amazonlinux:${BASE_VERSION:-2}
 
 # Set timezone to UTC
 RUN ln -sf /usr/share/zoneinfo/UTC /etc/localtime
+
+# Update image
+RUN yum update -y
+
+# Install EPEL repository
+RUN amazon-linux-extras install -y epel
 
 # Update image
 RUN yum update -y

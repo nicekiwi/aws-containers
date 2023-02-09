@@ -1,6 +1,7 @@
-FROM nicekiwi/aws-base:latest
+ARG BASE_TAG=latest
+FROM nicekiwi/aws-base:${BASE_TAG:-latest}
 
-RUN yum install -y httpd
+RUN yum install -y httpd mod_ssl
 
 # Cleanup
 RUN yum clean all

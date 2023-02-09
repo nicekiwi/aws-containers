@@ -1,4 +1,5 @@
-FROM nicekiwi/aws-base:latest
+ARG BASE_TAG=latest
+FROM nicekiwi/aws-base:${BASE_TAG:-latest}
 
 # Install NVM
 RUN curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash
